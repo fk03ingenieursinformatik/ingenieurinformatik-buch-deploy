@@ -1,41 +1,51 @@
-# Ingenieurinformatik 1 – Binder & Notebook Deployment
+# Ingenieurinformatik-buch – Deployment
 
-**Wichtig:** Dieses Repository ist **kein Arbeitsrepository**.
+**Dieses Repository ist kein Arbeits-Repository. Es wird automatisiert verwaltet und dient ausschließlich dem Deployment.**
 
-Es dient ausschließlich:
+Das Arbeits-Repository befindet sich auf [GitLab (LRZ)](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch). Dort werden Inhalte der interaktiven Website bzw. des Skripts gepflegt.
 
-- der **Binder-Anbindung** für interaktive Code-Ausführung auf der [Kurs-Website](https://ingenieurinformatik-buch-fcbc5c.pages.gitlab.lrz.de/intro.html)
-- dem **Deployment von Jupyter-Notebooks** für die Nutzung im JupyterHub
+Dieses repository dient ausschließlich:
 
-Die Inhalte (Markdown / MyST) werden **nicht** in diesem Repository gepflegt.
+- der Binder-Anbindung für interaktive Code-Ausführung auf der Kurs-Website: [Ingenieurinformatik 1](https://ingenieurinformatik-buch-fcbc5c.pages.gitlab.lrz.de/intro.html)
+- dem Deployment von Jupyter-Notebooks für die Nutzung im JupyterHub
 
----
 
-## Zweck dieses Repositories
+## Zweck und Funktionsweise
 
-- **Live-Code auf der Website (Binder)**: Damit Live-Code auf der interaktiven Website ausgeführt werden kann, benötigt Binder eine definierte Laufzeitumgebung. Diese wird automatisch als Container-Image gebaut; die Konfiguration liegt in `binder/`.
-  - Hinweis: Für Live-Code werden **keine Notebook-Dateien** benötigt. Ausgeführt wird der Zellcode im von Binder bereitgestellten Jupyter-Kernel im Container; der Browser kommuniziert dabei über das Website-Theme (Sphinx) mit Binder.
+### Live-Code auf der Website (Binder)
 
-- **Fallback: JupyterHub (Notebooks)**: Falls Live-Code nicht verfügbar ist, stellen wir die Inhalte zusätzlich als Jupyter-Notebooks im [JupyterHub der FK07 der Hochschule München](https://datahub.cs.hm.edu/hub/spawn). Beim Klick auf den JupyterHub-Button wird dieses Repository automatisch in die Nutzerumgebung geklont. Die Notebooks werden automatisch in dieses Repository gepusht. Gebaut werden sie im Arbeitsrepo auf GitLab LRZ in der GitLab CI-Pipeline:  
-  [gitlab-pipeline](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch/-/pipelines)
+Damit Live-Code auf der interaktiven Website ausgeführt werden kann, benötigt Binder eine definierte Laufzeitumgebung. Diese wird automatisch als Container-Image erstellt; die Konfiguration liegt in `binder/`.
+
+Hinweis: Für Live-Code werden keine Notebook-Dateien benötigt. Ausgeführt wird der Zellcode in dem von Binder bereitgestellten Jupyter-Kernel im Container; der Browser kommuniziert über das Website-Theme (Sphinx) mit Binder.
+
+### Fallback: JupyterHub (Notebooks)
+
+Falls Live-Code nicht verfügbar ist, werden die Inhalte zusätzlich als Jupyter-Notebooks im JupyterHub bereitgestellt: [JupyterHub FK07 (HM)](https://datahub.cs.hm.edu/hub/spawn).
+
+Ablauf beim Klick auf den JupyterHub-Button auf der Website:
+
+- Weiterleitung zum JupyterHub der Hochschule München
+- Anmeldung über Shibboleth
+- Öffnen des Notebooks, das zur aktuellen Seite gehört
+
+Technisch wird das dadurch ermöglicht, dass dieses Deployment-Repository automatisiert auf dem JupyterHub geklont wird und das passende Notebook per URL-Redirect ausgewählt wird.
+
+Bereitstellung der Notebooks:
+
+- Build im Arbeits-Repository per CI-Pipeline (aus Markdown/MyST werden Notebooks generiert)
+- Die generierten Notebooks werden anschließend automatisch in dieses Repository gepusht.
+- Pipeline: [GitLab CI Pipelines](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch/-/pipelines)
 
 ## Inhalte & Mitarbeit
 
-**Das eigentliche Arbeitsrepository liegt auf GitLab (HM):**
+Das eigentliche Arbeits-Repository liegt auf GitLab (LRZ).
 
 - Inhaltliche Änderungen
 - Korrekturen
 - Feedback
 
-Bitte **ausschließlich dort** einreichen:
+Bitte ausschließlich dort einreichen: [Issue erstellen](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch/-/issues)
 
-- Arbeitsrepository: [Gitlab LRZ](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch)
-
----
-
-## Keine Issues / PRs hier
-
-Bitte **keine Issues oder Pull Requests** in diesem GitHub-Repository anlegen.  
-Dieses Repository wird **automatisiert verwaltet**.
+**Bitte keine Issues oder Pull Requests in diesem GitHub-Repository anlegen!**
 
 Vielen Dank!
