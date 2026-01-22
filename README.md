@@ -2,7 +2,7 @@
 
 **Dieses Repository ist kein Arbeits-Repository. Es wird automatisiert verwaltet und dient ausschließlich dem Deployment.**
 
-Das Arbeits-Repository befindet sich auf [GitLab (LRZ)](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch). Dort werden Inhalte der interaktiven Website bzw. des Skripts gepflegt.
+Das Arbeits-Repository befindet sich im [Ingenieurinformatik-buch repository auf GitLab (LRZ)](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch). Dort werden Inhalte der interaktiven Website bzw. des Skripts gepflegt.
 
 Dieses repository dient ausschließlich:
 
@@ -34,7 +34,6 @@ Bereitstellung der Notebooks:
 
 - Build im Arbeits-Repository per CI-Pipeline (aus Markdown/MyST werden Notebooks generiert)
 - Die generierten Notebooks werden anschließend automatisch in dieses Repository gepusht.
-- Pipeline: [GitLab CI Pipelines](https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch/-/pipelines)
 
 ## Inhalte & Mitarbeit
 
