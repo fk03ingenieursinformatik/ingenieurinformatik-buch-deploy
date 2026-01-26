@@ -48,3 +48,9 @@ Bitte ausschließlich dort einreichen: [Issue erstellen](https://gitlab.lrz.de/f
 **Bitte keine Issues oder Pull Requests in diesem GitHub-Repository anlegen!**
 
 Vielen Dank!
+
+## Datensätze
+
+Einige Datensätze unter data stammen aus öffentlich zugänglichen repos:
+
+- `data/air_quality_no2.csv` stammt aus der pandas-Dokumentation (https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/air_quality_no2.csv)
