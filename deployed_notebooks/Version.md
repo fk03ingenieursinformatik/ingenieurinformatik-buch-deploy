@@ -1,1 +1,1 @@
-Diese notebooks wurden automatisiert erzeugt. Der dazugehörige commit ist: https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch/-/commit/5051eab8583a4a9730fb38e18e6d6fac4927ded1 (Release: 1.7.1)
+Diese notebooks wurden automatisiert erzeugt. Der dazugehörige commit ist: https://gitlab.lrz.de/fk03ingenieurinformatik/Ingenieurinformatik-buch/-/commit/dc519ca10cf9db17ab91f9fc2c712d496a5c2af2 (Release: 1.8.0)
